@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Bartender</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<style>
+body {
+  font-family: "Times New Roman", Georgia, Serif;
+   padding-top: 140px; 
+   background-color: #f8f9fa;
+   
+  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+h4 {
+  font-family: "Montserrat", sans-serif; /* Modifica a fonte do h4 para Montserrat */
+}
+
+header {
+      background-color: #000;
+      padding: 22px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    header.hidden {
+      opacity: 0;
+    }
+
+    header img {
+      height: 85px; /* Ajuste a altura conforme necessário */
+      margin-top: -15px; /* Ajuste para cima */
+      width: auto; /* Adiciona largura automática para manter a proporção */
+      max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner pai */
+    }
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 90px; /* Ajusta o espaço entre o header e o navbar */
+      z-index: 1000;
+      transition: top 0.5s ease-in-out;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+      transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
+    }
+
+    nav a:hover {
+      color: #ff0; /* Cor ao passar o mouse */
+    }
+
+    section {
+      position: relative; /* Adiciona posicionamento relativo ao contêiner */
+      overflow: hidden; /* Remove as bordas brancas da imagem */
+      text-align: center; /* Centraliza o texto horizontalmente */
+      margin-top: 60px; /* Ajusta o espaço entre o header e o conteúdo e move o texto um pouco para cima */
+      animation: fadeIn 1s ease-in-out; /* Adiciona a animação de fadeIn */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    section img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; /* Adiciona object-fit para cobrir toda a área do contêiner */
+      margin-top: 53px; /* Ajusta a margem superior para mover a imagem para baixo */
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+<body>
+
+
+
+<!-- Header -->
+<header>
+  <img src="C:\Users\Ricardo Barata\Downloads\logo.png" alt="Logo"> <!-- Substitua pelo caminho real do seu logotipo -->
+</header>
+
+<nav>
+  <a href="file:///C:/Users/Ricardo%20Barata/Desktop/siteSmartBartender-main/site.html#">Inicio</a>
+  <a href="file:///C:/Users/Ricardo%20Barata/Desktop/siteSmartBartender-main/sobre.html">Sobre</a>
+  <a href="file:///C:/Users/Ricardo%20Barata/Desktop/siteSmartBartender-main/fotos.html#">Fotos</a>
+  <a href="file:///C:/Users/Ricardo%20Barata/Desktop/siteSmartBartender-main/Indicações.html">Indicações</a>
+  <a href="file:///C:/Users/Ricardo%20Barata/Desktop/siteSmartBartender-main/contactos.html">Contactos</a>
+</nav>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- Seção Sobre -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+      <img src="C:\Users\Ricardo Barata\Downloads\ezgif.com-avif-to-png-converted.png" alt="Smart Bartender" style="width: 100%; height: auto;">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Projeto Smart Bartender</h1><br>
+      <h5 class="w3-center">Projeto Destaque</h5>
+      <p class="w3-large">Explore o projeto Smart Bartender, uma revolucionária combinação de mixologia e tecnologia. Este projeto inovador traz uma nova dimensão à preparação de coquetéis, atendendo tanto aos entusiastas de coquetéis quanto aos amantes da automação. Desenvolvido com a mais recente tecnologia e alimentado por inteligência artificial, oferece uma fusão perfeita entre o mundo dos coquetéis e a tecnologia inteligente.</p>
+      
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Seção Especificações -->
+  <div class="w3-row w3-padding-64" id="specifications">
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Especificações do Smart Bartender</h1><br>
+      <h4>Mistura Automatizada</h4>
+      <p class="w3-text-grey">Dosagem automatizada precisa para coquetéis consistentes.</p><br>
+
+      <h4>Interface Intuitiva</h4>
+      <p class="w3-text-grey">Controle fácil para personalizar suas bebidas favoritas.</p><br>
+
+      <h4>Design Elegante</h4>
+      <p class="w3-text-grey">Combinação perfeita de forma e função.</p><br>
+
+      <h4>Componentes Principais</h4>
+      <p class="w3-text-grey">Arduino, Raspberry Pi, Bombas Peristálticas e Relés de 8 Canais.</p><br>
+
+      <h4>Material Documentado</h4>
+      <p class="w3-text-grey">O projeto inclui esquemas detalhados, códigos e informações técnicas.</p><br>
+
+      <h4>Personalização de Bebidas</h4>
+      <p class="w3-text-grey">Permite criar e salvar suas próprias receitas de coquetéis.</p><br>
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <img src="C:\Users\Ricardo Barata\Desktop\31_lNdVFBgOX1.png" alt="Especificações do Smart Bartender" style="width: 100%; height: auto;">
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Fim do conteúdo da página -->
+</div>
+
+
+
+
+<!-- Footer -->
+<footer style="font-family: Arial, Helvetica, sans-serif;">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  &copy; 2023 Smart Bartender
+</footer>
+
+
+<script>
+
+
+  // Scripts---------------------------------------------------------------------------------
+
+
+  $(document).ready(function () {
+    var header = $('header');
+    var nav = $('nav');
+    var distance = 50; // Distância a partir do topo para mostrar o header
+
+    // Adiciona um ouvinte de evento de rolagem para manipular o navbar e header
+    $(window).scroll(function () {
+      var currentScrollTop = $(window).scrollTop();
+
+      if (currentScrollTop > distance) {
+        // Scrolling down
+        header.addClass('hidden');
+        nav.css({ top: '0' });
+      } else {
+        // Scrolling up
+        header.removeClass('hidden');
+        nav.css({ top: '90px' }); // Ajuste conforme necessário
+      }
+    });
+  });
+</script>
+  <script>
+    // Adiciona um evento quando a página termina de carregar
+    document.addEventListener('DOMContentLoaded', function () {
+      // Inicializa o ScrollReveal
+      ScrollReveal().reveal('section', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('#about', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('footer', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('#materiais', { duration: 1000, origin: 'bottom', distance: '20px' });
+      ScrollReveal().reveal('#specifications', { duration: 1000, origin: 'bottom', distance: '20px' });
+      // Define a opacidade para 1 após o carregamento da página
+      document.body.style.opacity = 1;
+    });
+
+    
+  </script>
+
+
+</body>
+</html>

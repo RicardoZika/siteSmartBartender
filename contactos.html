@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <title>Smart Bartender</title>
+  <style>
+    /* Reset some default styles */
+    body, h1, h2, p, ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      opacity: 0; /* Define a opacidade inicial para 0 */
+      background-color: #f8f9fa; /* Define a cor de fundo para toda a página */
+      font-family: "Times New Roman", Georgia, Serif;
+    }
+    
+    header {
+      background-color: #000;
+      padding: 22px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    header.hidden {
+      opacity: 0;
+    }
+
+    header img {
+      height: 85px; /* Ajuste a altura conforme necessário */
+      margin-top: -15px; /* Ajuste para cima */
+      width: auto; /* Adiciona largura automática para manter a proporção */
+      max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner pai */
+    }
+
+    nav {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 90px; /* Ajusta o espaço entre o header e o navbar */
+      z-index: 1000;
+      transition: top 0.5s ease-in-out;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+      transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    nav a:hover {
+      color: #ff0; /* Cor ao passar o mouse */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+/* Final do style css */
+  </style>
+
+
+
+  <script>
+    // Adiciona um evento quando a página termina de carregar
+    document.addEventListener('DOMContentLoaded', function () {
+      // Define a opacidade para 1 após o carregamento da página
+      document.body.style.opacity = 2;
+    });
+  </script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+
+<body>
+  <header>
+    <img src="C:\Users\Ricardo Barata\Downloads\logo.png" alt="Logo"> <!-- Substitua pelo caminho real do seu logotipo -->
+  </header>
+
+  <nav>
+    <a href="file:///C:/Users/Ricardo%20Barata/Desktop/siteSmartBartender-main/site.html#">Inicio</a>
+    <a href="file:///C:/Users/Ricardo%20Barata/Desktop/siteSmartBartender-main/sobre.html">Sobre</a>
+    <a href="file:///C:/Users/Ricardo%20Barata/Desktop/siteSmartBartender-main/fotos.html#">Fotos</a>
+    <a href="file:///C:/Users/Ricardo%20Barata/Desktop/siteSmartBartender-main/Indicações.html">Indicações</a>
+    <a href="file:///C:/Users/Ricardo%20Barata/Desktop/siteSmartBartender-main/contactos.html">Contactos</a>
+  </nav>
+
+
+
+  <!-- Adicione uma nova seção para a descrição do Smart Bartender -->
+  
+
+  
+
+  <footer>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    &copy; 2023 Smart Bartender
+  </footer>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
+  <script>
+
+
+    // Scripts---------------------------------------------------------------------------------
+
+
+    $(document).ready(function () {
+      var header = $('header');
+      var nav = $('nav');
+      var distance = 50; // Distância a partir do topo para mostrar o header
+  
+      // Adiciona um ouvinte de evento de rolagem para manipular o navbar e header
+      $(window).scroll(function () {
+        var currentScrollTop = $(window).scrollTop();
+  
+        if (currentScrollTop > distance) {
+          // Scrolling down
+          header.addClass('hidden');
+          nav.css({ top: '0' });
+        } else {
+          // Scrolling up
+          header.removeClass('hidden');
+          nav.css({ top: '90px' }); // Ajuste conforme necessário
+        }
+      });
+    });
+  </script>
+    <script>
+      // Adiciona um evento quando a página termina de carregar
+      document.addEventListener('DOMContentLoaded', function () {
+        // Inicializa o ScrollReveal
+        ScrollReveal().reveal('section', { duration: 1000, origin: 'bottom', distance: '20px' });
+        ScrollReveal().reveal('#descricao', { duration: 1000, origin: 'bottom', distance: '20px' });
+        ScrollReveal().reveal('footer', { duration: 1000, origin: 'bottom', distance: '20px' });
+        ScrollReveal().reveal('#bout', { duration: 1000, origin: 'bottom', distance: '20px' });
+        // Define a opacidade para 1 após o carregamento da página
+        document.body.style.opacity = 1;
+      });
+    </script>
+
+</body>
+
+</html>

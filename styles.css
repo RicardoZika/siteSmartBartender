@@ -1,0 +1,248 @@
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    opacity: 0; /* Define a opacidade inicial para 0 */
+    transition: opacity 1s ease-in-out; /* Adiciona uma transição suave para a mudança de opacidade */
+    background-color: #f8f9fa; /* Define a cor de fundo para toda a página */
+  }
+  
+
+  header {
+    background-color: #000;
+    padding: 22px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  header.hidden {
+    opacity: 0;
+  }
+
+  header img {
+    height: 85px; /* Ajuste a altura conforme necessário */
+    margin-top: -15px; /* Ajuste para cima */
+    width: auto; /* Adiciona largura automática para manter a proporção */
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner pai */
+  }
+
+  nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 90px; /* Ajusta o espaço entre o header e o navbar */
+    z-index: 1000;
+    transition: top 0.5s ease-in-out;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+    transition: color 0.3s; /* Adiciona uma transição suave para a mudança de cor */
+  }
+
+  nav a:hover {
+    color: #ff0; /* Cor ao passar o mouse */
+  }
+
+  section {
+    position: relative; /* Adiciona posicionamento relativo ao contêiner */
+    overflow: hidden; /* Remove as bordas brancas da imagem */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-top: 60px; /* Ajusta o espaço entre o header e o conteúdo e move o texto um pouco para cima */
+    animation: fadeIn 1s ease-in-out; /* Adiciona a animação de fadeIn */
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Adiciona object-fit para cobrir toda a área do contêiner */
+    margin-top: 53px; /* Ajusta a margem superior para mover a imagem para baixo */
+  }
+
+
+
+  section div {
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+color: #fff;
+font-weight: bold;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+padding: 10px;
+margin-bottom: 1px; /* Adiciona margem inferior para compensar a margem superior da imagem */
+}
+
+section p {
+margin: 20px 0; /* Espaço acima do parágrafo */
+}
+
+
+  #descricao {
+    background-color: #f8f8f8;
+    padding: 40px 20px 0; /* Ajusta o espaçamento superior */
+    text-align: center;
+  }
+
+  #descricao h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  #descricao p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  #descricao ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #descricao li {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  #descricao strong {
+    font-weight: bold;
+    color: #000; /* Cor do texto em negrito */
+  }
+
+  /* Services Section */
+  #services {
+    
+    max-width: 600px; /* Ajuste a largura máxima conforme necessário */
+    margin: 0 auto; /* Centraliza a seção na tela */
+    background-color: #f8f9fa;
+    padding: 30px 20px; /* Ajusta o espaçamento interno */
+    text-align: center;
+  }
+
+  #services h3 {
+    text-shadow: 0.1em 0.1em 0.2em gray;
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: black; 
+  }
+
+  .service {
+    margin: 10px; /* Reduz a margem entre os serviços */
+  }
+
+  .service i {
+    font-size: 48px;
+    color: #ff8c00; /* Laranja */
+    margin-bottom: 10px;
+  }
+
+  .service h4 {
+    font-size: 20px; /* Reduz o tamanho do título do serviço */
+    margin-bottom: 5px; /* Reduz a margem inferior do título */
+    color: #343a40;
+  }
+
+  .service p {
+    font-size: 16px; /* Reduz o tamanho do texto do serviço */
+    color: #6c757d;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .service-icon {
+    max-width: 80px; /* Reduz a largura máxima do ícone do serviço */
+    height: auto;
+  }
+
+  #bout h3 {
+    font-size: 36px;
+    text-shadow: 0.1em 0.1em 0.2em gray;
+    text-align: center;
+  }
+      /* Adicione estilos CSS para a tabela */
+      section table {
+        margin-top: 20px;
+        width: 100%;
+      }
+  
+      section th, section td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+  
+      section th {
+        background-color: #f2f2f2;
+      } 
+      .smart-details img {
+        width: 50%;
+        float: right;
+        margin-left: 20px;
+      }
+
+      .smart-details h1  {
+        color: lightgray;
+        text-shadow: none;
+        text-align: left;
+        margin-right: 20px;
+      }
+  
+      .smart-details p {
+        clear: both;
+        margin-top: 10px;
+        text-align: left;
+        max-width: 50%;
+      }
+  
+      /* Estilos CSS para a seção de materiais */
+      .smart-material table {
+        margin-top: 20px;
+        width: 100%;
+      }
+  
+      .smart-material th, .smart-material td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+  
+      .smart-material th {
+        background-color: #f2f2f2;
+      }
